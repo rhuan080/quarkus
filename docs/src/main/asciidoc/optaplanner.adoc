@@ -445,7 +445,7 @@ public class TimeTableConstraintProvider implements ConstraintProvider {
         // A room can accommodate at most one lesson at the same time.
 
         // Select a lesson ...
-        return constraintFactory.from(Lesson.class)
+        return constraintFactory
                 .fromUniquePair(Lesson.class,
                         // ... in the same timeslot ...
                         Joiners.equal(Lesson::getTimeslot),
